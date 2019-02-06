@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* for(var i=0;i<15;i++){
+    for(var x=0;x<30;x++){
+    document.write('*&nbsp');
+    }
+    document.write('<br/>')
+        }*/
+        for(var x=0; x<15; x++){
+            for(var y=0; y<x; y++){
+                document.write("*&nbsp");
+            }
+            document.write("*&nbsp<br />");
+        }
+       document.write('<br/>');
+       /----------------------------------------------------------/
+       
+        for(var x=0; x<15; x++){
+            for(var y=15; y>x-1; y--){
+                document.write("&nbsp&nbsp");
+            } 
+            for(var z=0; z<x+1; z++){
+                document.write("*&nbsp&nbsp");
+            } 
+            document.write("<br />");
+        }
+        document.write("<br/>");
+    </script>
+</body>
+</html>
