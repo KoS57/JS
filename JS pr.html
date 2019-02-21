@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4 кнопки - и на каждую повесить обработчик на нажатие 
+    4 кнопки - это математические операции Функции - 4
+    Функция просит ввести 2 чилса и выполняет арифметическую операцию -->
+    <form>
+        <p><input type="button" value=" Сложение" onclick='maths(add)'></p>
+        <p><input type="button" value=" Вычитание" onclick='maths().sub()'></p>
+        <p><input type="button" value=" Умножение " onclick='maths().mult()'></p>
+        <p><input type="button" value=" Деление  " onclick='maths(divis)'></p>
+       </form> 
+       <script>
+          function maths(){
+       function add(x,y){
+        x=+prompt('Введите число');
+        y=+prompt('Введите число');
+ alert (x+y);
+return;
+       };
+       return add(),
+       
+       function sub(x,y){
+        x=+prompt('Введите число');
+        y=+prompt('Введите число');
+         alert (x-y);
+         return;
+       };
+       return  sub();
+       function mult(x,y){
+        x=+prompt('Введите число');
+        y=+prompt('Введите число');
+         alert (x*y);
+         return;
+       };
+       return  mult();
+       function divis(x,y){
+        x=+prompt('Введите число');
+        y=+prompt('Введите число');
+         alert (x/y);
+         return;
+       };
+       return  divis();
+          };
+         console.log(typeof(add));
+         console.log(typeof(divis));
+       </script>
+</body>
+</html>

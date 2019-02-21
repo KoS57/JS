@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function Sinema(_film,_actor,_duration,){
+this.film=_film;   
+    this.actor=_actor;
+    this.duration=_duration;
+    this.det=function (){
+alert('В фильме '+this.film + "в главной роли снимается "+ this.actor+" продолжительность фильма "+ this.duration);
+    };
+this.money=function(_spent,_revenue){
+    this.spent=_spent;
+    this.revenue=_revenue;
+    this.mon=function(){
+        document.write("Было потрачено на съеки "+this.spent+" кассовый сбор состовляет "+ this.revenue+ '<br/>');
+    }
+}
+this.land=function(_country,_city){
+    this.city=_city;
+    this.country=_country;
+    this.lan=function(){
+document.write("Съемки фильма проходили в таких странах как "+ this.country + ". А именно в таких городах: " + this.city+"<br/>");
+    }
+}
+}
+    var a=new Sinema('Отступники',"Леонардо Ди Каприо","два часа");
+    a.det();
+    a.money('десять миллионов',"сто миллионов");
+    a.mon();
+    a.land("Канада, США", "Нью-Йорк, Бостон,Торонто");
+    a.lan();
+    
+    </script>
+</body>
+</html>

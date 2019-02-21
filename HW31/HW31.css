@@ -159,6 +159,7 @@ li{
     width:22%;
     height:36px;
     margin-right:10px;
+    
 }
 .icon-container{
     border-radius:4px;
@@ -168,10 +169,13 @@ li{
     height:36px;
     font-size:18px;
     line-height:38px;
+    
+}
+.is-full :hover{
+    color:grey;
 }
 
-
-    .icon-list b:before {
+   /* .icon-list b:before {
         content:'';
         float:left;
         width:20px;
@@ -180,8 +184,34 @@ li{
        cursor:pointer;
       
         overflow: hidden;
-}
+}*/
 
 .is-nudged-up {
     color:#b1361e;
+   font-size:14px;
+   text-align:center;
+}
+.is-full {
+    margin: 5px;
+    
+}
+.copy{
+    border:1px solid black;
+    width:100%;
+    height:1500px;
+
+}
+.copy-image{
+    vertical-align:center;
+    width:500px;
+   border:1px solid black;
+   position:absolute;
+   right: 100px;
+}
+.copy-text{
+    width:300px;
+    height:500px;
+    border:1px solid black;
+    position:absolute;
+    right:600px;
 }

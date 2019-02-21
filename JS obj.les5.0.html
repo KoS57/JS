@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+<script>
+var arr = [
+        {name: 'BMW', price: 2300, model: 'X5', color: 'red'},
+        {name: 'Infinity', price: 4500, model: 'FX-35', color: 'white'},
+        {name: 'Honda', price: 3900, model: 'Accord', color: 'blue'},
+        {name: 'Ford', price: 1500, model: 'Focus', color: 'green'},
+        {name: 'BMW', price: 2300, model: 'X5', color: 'orange'},
+        {name: 'Ford', price: 5000, model: 'Fusion', color: 'white'},
+        {name: 'BMW', price: 1900, model: 'X3', color: 'blue'},
+        {name: 'Ford', price: 2300, model: 'Fiesta', color: 'black'},
+        {name: 'Infinity', price: 5300, model: 'FX-45', color: 'black'},
+        {name: 'Honda', price: 2500, model: 'Civic', color: 'red'},
+    ];
+// только белые и синие машины-----------------------------------------------------------------
+for(var a=0;a<arr.length; a++){
+         if(arr[a].color == 'white'){
+               document.write(arr[a].color+'<hr/>'); 
+            }else if(arr[a].color == 'blue'){
+                document.write(arr[a].color +'<hr/>');
+            }
+        }
+// стоимость более 4000 и отсортировано в порядке возрастания цены-----------------------------------
+var many=[];
+for(var a=0;a<arr.length; a++){
+         if(arr[a].price >4000){
+               many.push(arr[a].price);
+                
+            }
+        }
+       document.write(many+'<hr/>');
+        many.sort(function(a,b){
+            return a-b;
+        })   
+//  стоимость более 4000--------------------------------------------------------------------------------------
+for(var a=0;a<arr.length; a++){
+         if(arr[a].price <4000){
+                document.write(arr[a].price+'<hr/>');
+            }
+        }
+//все машины -----------------------------------------------------------------------------------------------
+        for(var a=0;a<arr.length; a++){
+         if(arr[a].name ==arr[a].name){
+                document.write(arr[a].name+'<hr/>');
+            }
+            }
+// только Ford----------------------------------------------------------------------------------------------
+            for(var a=0;a<arr.length; a++){
+                for(var b in arr[a]){
+         if(arr[a][b]== 'Ford'){
+                document.write(arr[a][b] + '<hr/>');
+            }
+            }
+            }
+
+
+
+</script>
+</body>
+</html>
