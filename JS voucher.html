@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function voucher(colOfpeople,colOfday,country){
+        
+        var priceEgypt=300;
+        var priceTyrkey=200;
+        var priceBulgaria=100;
+        var price;
+        function people(){
+        if(colOfpeople<=0){
+            alert('Ошибка!!!Выберите большое кол-во людей');
+        }
+        }
+        people();
+        function day(){
+            if(colOfday<=5){
+                alert('Ошибка '+ colOfday+ 'дня путевку брать нельзя');
+                priceEgypt=priceEgypt*0;
+                priceTyrkey=priceTyrkey*0;
+                priceBulgaria=priceBulgaria*0;
+            }else if(colOfday=>10){
+                priceEgypt=priceEgypt*0,9;
+                priceTyrkey=priceTyrkey*0,9;
+                priceBulgaria=priceBulgaria*0,9;
+
+            }
+        }
+        day();
+        function countryTravel(){
+            if(country=='Egypt'){
+                price=priceEgypt*colOfpeople*colOfday;
+            }else if(country=='Tyrkey'){
+                price=priceTyrkey*colOfpeople*colOfday;
+            }else if(country=='Bulgaria'){
+                price=priceBulgaria*colOfpeople*colOfday;
+            }
+        }
+        countryTravel();
+        return price;
+    }
+console.log(voucher(6,4,'Egypt'));
+
+// document.write('Вы взяли путевку в '+country+' на ' + colOfday + 'na' + colOfpeople + "people"+ <hr/>);
+document.write('Стоимость путевки' + voucher(6,5,'Egypt')+'<hr/>');
+document.write('Стоимость путевки' + voucher(6,8,'Tyrkey')+'<hr/>');
+document.write('Стоимость путевки' + voucher(6,9,'Bulgaria')+'<hr/>');
+document.write('Стоимость путевки' + voucher(6,10,'Egypt')+'<hr/>');
+document.write('Стоимость путевки' + voucher(6,7,'Egypt')+'<hr/>');
+    </script>
+</body>
+</html>
