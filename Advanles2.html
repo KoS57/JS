@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+function selectFirstChild() {
+            var list = document.getElementById("list");
+            // Получение первого дочернего элемента в списке.
+            var child = list.firstChild;
+            if (child != null) {
+                // добавление атрибута style="color:red" для выбранного элемента.
+                child.setAttribute("style", "color:black;");
+            }
+        }
+</script>
+
+    <style>    
+    div {
+    width: 70px; height: 70px;
+    display: inline-block;
+    margin-right: 5px;
+    background:red;
+   }
+  </style>
+ </head>
+ <body>
+     <span id='list'><div></div>
+  <div ></div>
+  <div ></div>
+  <div ></div>
+  <div ></div>
+</span>
+  <input type="button" value="Кнопка" onclick="selectFirstChild()" />
+</body>
+</html>

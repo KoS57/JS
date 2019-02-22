@@ -8,34 +8,59 @@
 </head>
 <body>
     <script>
-function Sinema(_film,_actor,_duration,){
-this.film=_film;   
+function Sinema(_name,_year){
+this.name=_name;   
+    this.year=_year;
+    this.det=function (){
+document.write('Фильм '+this.name + " был выпущен в прокат "+ this.year+ "<br/>");
+    };
+}
+
+function Film(_name,_year,_actor,_duration,){
+    this.name=_name;   
+    this.year=_year;
     this.actor=_actor;
     this.duration=_duration;
-    this.det=function (){
-alert('В фильме '+this.film + "в главной роли снимается "+ this.actor+" продолжительность фильма "+ this.duration);
-    };
-this.money=function(_spent,_revenue){
-    this.spent=_spent;
-    this.revenue=_revenue;
     this.mon=function(){
-        document.write("Было потрачено на съеки "+this.spent+" кассовый сбор состовляет "+ this.revenue+ '<br/>');
+        document.write("В главной роли снимается "+this.actor+" продолжительность фильма "+ this.duration+ '<br/>');
     }
 }
-this.land=function(_country,_city){
-    this.city=_city;
-    this.country=_country;
+function Genres(_name,_year,_genre){
+    this.name=_name;   
+    this.year=_year;
+    this.genre=_genre;
     this.lan=function(){
-document.write("Съемки фильма проходили в таких странах как "+ this.country + ". А именно в таких городах: " + this.city+"<br/>");
+document.write("Фильм снят в жанре "+ this.genre +"<br/>");
     }
 }
-}
-    var a=new Sinema('Отступники',"Леонардо Ди Каприо","два часа");
-    a.det();
-    a.money('десять миллионов',"сто миллионов");
-    a.mon();
-    a.land("Канада, США", "Нью-Йорк, Бостон,Торонто");
-    a.lan();
+var sin=new Sinema();  
+
+Film.prototype=sin;
+Genres.prototype=sin; 
+
+var f1=new Film('Отступники',"2000 год","Леонардо Ди Каприо", "2 часа 30 минут");
+f1.det();
+f1.mon();
+
+var f2=new Genres("Дедпул","2018 год", "комедия");
+f2.det();
+f2.lan();
+
+var f3=new Film("Доктор Стрэндж", "2016 год", "Бенедикт Камбербэтч", "один час тридцать минут");
+f3.det();
+f3.mon();
+
+var f4= new Film("Механик", "2016 год", "Джейсон Стейтем", "один час сорок минут");
+f4.det();
+f4.mon();
+
+var f5=new Genres('Отступники',"2000 год","детектив");
+f5.det();
+f5.lan();
+
+var f6=new Genres("Доктор Стрэндж", "2016 год","фантастика");
+f6.det();
+f6.lan();
     
     </script>
 </body>
