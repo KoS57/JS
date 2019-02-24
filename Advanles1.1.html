@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function Sinema(_name,_year){
+this.name=_name;   
+    this.year=_year;
+    this.det=function (){
+document.write('Фильм '+this.name + " был выпущен в прокат "+ this.year+ "<br/>");
+    };
+}
+
+function Film(_name,_year,_actor,_duration,){
+    this.name=_name;   
+    this.year=_year;
+    this.actor=_actor;
+    this.duration=_duration;
+    this.mon=function(){
+        document.write("В главной роли снимается "+this.actor+" продолжительность фильма "+ this.duration+ '<br/>');
+    }
+}
+function Genres(_name,_year,_genre){
+    this.name=_name;   
+    this.year=_year;
+    this.genre=_genre;
+    this.lan=function(){
+document.write("Фильм снят в жанре "+ this.genre +"<br/>");
+    }
+}
+var sin=new Sinema();  
+
+Film.prototype=sin;
+Genres.prototype=sin; 
+
+var f1=new Film('Отступники',"2000 год","Леонардо Ди Каприо", "2 часа 30 минут");
+f1.det();
+f1.mon();
+
+var f2=new Genres("Дедпул","2018 год", "комедия");
+f2.det();
+f2.lan();
+
+var f3=new Film("Доктор Стрэндж", "2016 год", "Бенедикт Камбербэтч", "один час тридцать минут");
+f3.det();
+f3.mon();
+
+var f4= new Film("Механик", "2016 год", "Джейсон Стейтем", "один час сорок минут");
+f4.det();
+f4.mon();
+
+var f5=new Genres('Отступники',"2000 год","детектив");
+f5.det();
+f5.lan();
+
+var f6=new Genres("Доктор Стрэндж", "2016 год","фантастика");
+f6.det();
+f6.lan();
+    
+    </script>
+</body>
+</html>
