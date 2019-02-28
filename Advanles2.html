@@ -5,34 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<script>
-function selectFirstChild() {
-            var list = document.getElementById("list");
-            // Получение первого дочернего элемента в списке.
-            var child = list.firstChild;
-            if (child != null) {
-                // добавление атрибута style="color:red" для выбранного элемента.
-                child.setAttribute("style", "color:black;");
-            }
-        }
-</script>
-
     <style>    
-    div {
-    width: 70px; height: 70px;
-    display: inline-block;
-    margin-right: 5px;
-    background:red;
+    .div{
+   border: 1px solid black;
+   height:50px;
+   width:50px;
+   background:red;
+   float:left;
+   margin:5px;
    }
+   
   </style>
  </head>
  <body>
-     <span id='list'><div></div>
-  <div ></div>
-  <div ></div>
-  <div ></div>
-  <div ></div>
-</span>
-  <input type="button" value="Кнопка" onclick="selectFirstChild()" />
+     <div id='list'><div class='div'></div><div class='div'></div><div class='div'></div><div class='div'></div><div class='div'></div>
+</div>
+  <p><input type="button" value="Кнопка" onclick="selectNextNode()" /></p>
+  <script>
+var node=null;
+function selectNextNode(){
+  resetColor();
+  if (node == null){
+    var list=document.getElementById('list');
+    node=list.firstChild;
+    node.setAttribute('style', "background:green;");
+    return;
+  }
+  node=node.nextSibling;
+  if(node != null){
+    node.setAttribute('style', 'background:green;');
+  }
+}
+
+function resetColor(){
+var divcl=document.getElementsByClassName('div');
+for (var i=0;i<divcl.length;i++){
+  divcl[i].setAttribute('style','background:red;');
+}
+}
+ 
+  </script>
 </body>
 </html>

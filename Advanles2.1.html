@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+    <p><input type='button' value='нажми' onclick='text()'/></p>
+    <div id='mas'>
+
+    </div>
+    <script>
+        function text(){
+             var div=document.createElement('div');
+             div.innerHTML='Новое сообщение';
+             mas.appendChild(div);
+             delPar(div);
+         }
+         var indexPar=0;
+         function delPar(){
+             if(indexPar<9){
+                 indexPar++
+             }else {while(mas.firstChild)
+             {mas.removeChild(mas.firstChild);}
+             indexPar=0;
+             }
+         }
+         </script>
+</body>
+</html>

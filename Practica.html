@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        window.onload=function show(){
+var counter=5;
+var inter= setInterval(Count,1000);
+function Count(){
+  counter=counter-1;
+  if(counter<0){
+      clearInterval(inter);
+      return; }
+    document.getElementById('output').innerHTML=counter;    
+}
+        } 
+        </script>
 </head>
 <body>
-   <p> Вы будете перенаправлены на страницу youtube через <span></span> секунд</p>
-    <script>
-    var counter=5;
+   <p> Вы будете перенаправлены на страницу youtube через <span id='output'>5</span> секунд</p>
     
-    function sayHello(){
-        timer=setInterval(function(){
-            consol.log(--counter);
-        },1000)
-    }
-    span.innerHTML=counter;
-    </script>
 </body>
 </html>
